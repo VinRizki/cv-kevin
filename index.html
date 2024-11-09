@@ -1,497 +1,232 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  text-decoration: none;
-  border: none;
-  outline: none;
-  scroll-behavior: smooth;
-  font-family: 'Poppins', sans-serif;
-}
-
-:root {
-  --bg-color: #1f242d;
-  --second-bg-color: #323946;
-  --text-color: #fff;
-  --main-color: #0ef;
-}
-
-*::selection {
-  background: var(--main-color);
-  color: var(--bg-color);
-}
-
-html {
-  font-size: 62.5%;
-  overflow-x: hidden;
-}
-
-body {
-  background: var(--bg-color);
-  color: var(--text-color);
-}
-
-section {
-  min-height: 100vh;
-  padding: 10rem 9% 2rem;
-}
-
-.Beranda .Beranda-img img {
-  border-radius: 100%;
-  border: 10px;
-  animation: floatImage 4s ease-in-out infinite;
-}
-
-@keyframes floatImage {
-  0% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(-2.4rem);
-  }
-  100% {
-    transform: translateY(0);
-  }
-}
-
-.Tentang .Tentang-img img {
-  border-radius: 100%;
-  border: 10px solid var(--second-bg-color);
-}
-
-.header {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  padding: 2rem 9%;
-  background: var(--bg-color);
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  z-index: 100;
-}
-
-.header.sticky {
-  border-bottom: 0.1rem solid rgba(0, 0, 0, 0.2);
-}
-
-.logo {
-  font-size: 2.5rem;
-  color: var(--text-color);
-  font-weight: 600;
-  cursor: default;
-}
-
-.navbar a {
-  font-size: 1.7rem;
-  color: var(--text-color);
-  margin-left: 4rem;
-  transition: 0.3s;
-}
-
-.navbar a:hover,
-.navbar a.active {
-  color: var(--main-color);
-}
-
-#menu-icon {
-  font-size: 3.6rem;
-  color: var(--text-color);
-  display: none;
-}
-
-.Beranda {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.Beranda-content h2 {
-  font-size: 3.5rem;
-}
-
-.Tentang-content h2 {
-  font-size: 2.5rem;
-}
-
-.Beranda-content h3 {
-  font-size: 3.2rem;
-  font-weight: 700;
-}
-
-.Beranda-content h3:nth-of-type(2) {
-  margin-bottom: 2rem;
-}
-
-span {
-  color: var(--main-color);
-}
-
-.Beranda-content p {
-  font-size: 1.6rem;
-}
-
-.Tentang-content p {
-  font-size: 1.6rem;
-}
-
-.sosial-media a {
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
-  width: 4rem;
-  height: 4rem;
-  background: transparent;
-  border: 0.2rem solid var(--main-color);
-  border-radius: 50%;
-  font-size: 2rem;
-  color: var(--main-color);
-  margin: 3rem 1.5rem 3rem 0;
-  transition: 0.5s ease;
-}
-
-.sosial-media a:hover {
-  background: var(--main-color);
-  color: var(--second-bg-color);
-  box-shadow: 0 0 1rem var(--main-color);
-}
-
-.btn {
-  display: inline-block;
-  padding: 1rem 2.8rem;
-  background: var(--main-color);
-  border-radius: 4rem;
-  box-shadow: 0 0 1rem var(--main-color);
-  font-size: 1.6rem;
-  color: var(--second-bg-color);
-  letter-spacing: 0.1rem;
-  font-weight: 600;
-  transition: 0.5s ease;
-}
-.btn:hover {
-  box-shadow: none;
-}
-
-.Tentang {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 2rem;
-  background: var(--second-bg-color);
-}
-
-.heading {
-  text-align: center;
-  font-size: 4.5rem;
-}
-
-.Tentang-content h2 {
-  text-align: left;
-  line-height: 1.2;
-}
-
-.Tentang-content h3 {
-  font-size: 2.6rem;
-}
-.Tentang-content p {
-  font-size: 1.6;
-  margin: 2rem 0 3rem;
-}
-
-.Skill h2 {
-  margin-bottom: 5rem;
-}
-.Skill-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 2rem;
-}
-.Skill-container .Skill-box {
-  flex: 1 1 30 rem;
-  background: var(--second-bg-color);
-  padding: 3rem 2rem 4rem;
-  border-radius: 2rem;
-  text-align: center;
-  border: 0.2rem solid var(--bg-color);
-}
-.Penghargaan {
-  background: var(--second-bg-color);
-  padding-top: 6rem;
-}
-
-.Penghargaan h2 {
-  margin-bottom: 4rem;
-}
-
-.Penghargaan-container {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  align-items: center;
-  gap: 2.5rem;
-}
-
-.Penghargaan-container .Penghargaan-box {
-  position: relative;
-  border-radius: 2rem;
-  box-shadow: 0 0 1rem var(--bg-color);
-  overflow: hidden;
-  display: flex;
-}
-
-.Penghargaan-box img {
-  width: 100%;
-  transition: 0.5s ease;
-}
-
-.Penghargaan-box:hover img {
-  transform: scale(1.1);
-}
-
-.Penghargaan-box .Penghargaan-layer {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(rgba(0, 0, 0, 0.1), var(--bg-color));
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  text-align: center;
-  padding: 0 4rem;
-  transform: translateY(100%);
-  transition: 0.5s ease;
-}
-
-.Penghargaan-box:hover .Penghargaan-layer {
-  transform: translateY(0);
-}
-
-.Penghargaan-layer h4 {
-  font-size: 2rem;
-}
-
-.Penghargaan-layer p {
-  font-size: 1.6rem;
-  margin: 0.3rem 0 1rem;
-}
-
-.Penghargaan-layer a {
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
-  width: 5rem;
-  height: 5rem;
-  background: var(--text-color);
-  border-radius: 50%;
-}
-
-.Penghargaan-layer a i {
-  font-size: 2rem;
-  color: var(--second-bg-color);
-}
-
-.Kontak h2 {
-  margin-bottom: 3rem;
-}
-
-.Kontak form {
-  max-width: 70rem;
-  margin: 1rem auto;
-  text-align: center;
-  margin-bottom: 3rem;
-}
-
-.Kontak form .input-box {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-}
-
-.Kontak form .input-box input,
-.Kontak form textarea {
-  width: 100%;
-  padding: 1.5rem;
-  font-size: 1.6rem;
-  color: var(--text-color);
-  background: var(--second-bg-color);
-  border-radius: 0.8rem;
-  margin: 0.7rem 0;
-}
-
-.Kontak form .input-box input {
-  width: 49%;
-}
-
-.Kontak form textarea {
-  resize: none;
-}
-
-.Kontak form .btn {
-  margin-top: 2rem;
-  cursor: pointer;
-}
-
-.footer {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap;
-  padding: 2rem 9%;
-  background: var(--second-bg-color);
-}
-
-.footer-text p {
-  font-size: 1.6rem;
-}
-.footer-iconTop a {
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
-  padding: 0.8rem;
-  background: var(--main-color);
-  border-radius: 0.8rem;
-  transition: 0.5s ease;
-}
-
-.footer-iconTop a:hover {
-  box-shadow: 0 0 1rem var(--main-color);
-}
-
-.footer-iconTop a i {
-  font-size: 2.4rem;
-  color: var(--second-bg-color);
-}
-/* BREAKPOINTS */
-@media (max-width: 1200px) {
-  html {
-    font-size: 55%;
-  }
-}
-@media (max-width: 991px) {
-  .header {
-    padding: 2rem 3%;
-  }
-  selection {
-    padding: 10rem 3% 2rem;
-  }
-
-  .Skill {
-    padding-bottom: 7rem;
-  }
-
-  .Penghargaan {
-    padding-bottom: 7rem;
-  }
-
-  .Kontak {
-    min-height: auto;
-  }
-
-  .footer {
-    padding: 2rem 3%;
-  }
-}
-@media (max-width: 768px) {
-  #menu-icon {
-    display: block;
-  }
-  .navbar {
-    position: absolute;
-    top: 100%;
-    left: 0;
-    width: 100%;
-    padding: 1rem 3%;
-    background: var(--bg-color);
-    border-top: 1rem solid rgba(0, 0, 0, 0.2);
-    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
-    display: none;
-  }
-
-  .navbar.active {
-    display: block;
-  }
-
-  .navbar a {
-    display: block;
-    font-size: 2rem;
-    margin: 3rem 0;
-  }
-
-  .Beranda {
-    flex-direction: column;
-  }
-
-  .Beranda-content h3 {
-    font-size: 2.6rem;
-  }
-
-  .Beranda-content h1 {
-    font-size: 5rem;
-  }
-
-  .Beranda-img img {
-    width: 70vw;
-    margin-top: 4rem;
-  }
-
-  .Tentang {
-    flex-direction: column-reverse;
-  }
-
-  .Tentang img {
-    width: 70vw;
-    margin-top: 4rem;
-  }
-
-  .Skill h2 {
-    margin-bottom: 3rem;
-  }
-
-  .Penghargaan h2 {
-    margin-bottom: 3rem;
-  }
-
-  .Penghargaan-container {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-@media (max-width: 600px) {
-  .Penghargaan-container {
-    grid-template-columns: 1fr;
-  }
-}
-
-@media (max-width: 400px) {
-  html {
-    font-size: 50%;
-  }
-  .Kontak form .input-box input {
-    width: 100%;
-  }
-}
-
-@media (max-width: 360px) {
-  .Beranda-img img {
-    width: 90vw;
-  }
-  .Tentang-img img {
-    width: 90vw;
-  }
-
-  .footer {
-    flex-direction: column-reverse;
-  }
-
-  .footer p {
-    text-align: center;
-    margin-top: 2rem;
-  }
-}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Personal Portfolio Website Design</title>
+
+    <!-- box icons -->
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- custom css -->
+    <link rel="stylesheet" href="Style.css" />
+  </head>
+
+  <body>
+    <header class="header">
+      <a href="#" class="logo">Portfolio</a>
+
+      <i class="bx bx-menu" id="menu-icon"></i>
+
+      <nav class="navbar">
+        <a href="#Beranda" class="active">Beranda</a>
+        <a href="#Tentang">Tentang</a>
+        <a href="#Skill">Skill</a>
+        <a href="#Penghargaan">Penghargaan</a>
+        <a href="#Kontak">Kontak</a>
+      </nav>
+    </header>
+
+    <section class="Beranda" id="Beranda">
+      <div class="Beranda-content">
+        <h3>Hallo, it's Me</h3>
+        <h2>Kevin Rizki Dwi Putra</h2>
+        <h3>and I'm a <span>Technical Support</span></h3>
+        <h1>Pengalaman Teknisi Perbankan</h1>
+        <div class="container">
+            <p>
+          Sebagai seorang teknisi dukungan teknis (technical support), 
+          saya memiliki pengalaman yang luas dalam memberikan solusi IT dan pemecahan masalah untuk berbagai klien dan organisasi. 
+          Dengan latar belakang yang kuat dalam teknologi informasi dan keterampilan komunikasi yang baik,
+          saya berkomitmen untuk memastikan bahwa sistem dan perangkat yang digunakan oleh klien berfungsi dengan optimal.
+        </p>
+        <a href="#Tentang" class="btn">Baca Lebih Lanjut</a>
+
+        </div>
+          <div class="sosial-media">
+          <a href="https://www.facebook.com/kevin.r.583"><i class="bx bxl-facebook"></i></a>
+          <a href="#"><i class="bx bxl-twitter"></i></a>
+          <a href="https://www.instagram.com/krdp11/"><i class="bx bxl-instagram"></i></a>
+          <a href="https://www.linkedin.com/in/krdp11/"><i class="bx bxl-linkedin"></i></a>
+          <a href="https://wa.me/6289525885868"><i class='bx bxl-whatsapp'></i></a>
+        </div>
+        <a href="https://drive.google.com/file/d/1mroxs9eljL4Lr6BSWNuvZYe78yhyrvvF/view?usp=sharing" class="btn">Lihat CV</a>
+         <a href="https://vinrizki.github.io/music/" class="btn">Musiku</a>
+      </div>
+
+      <div class="Beranda-img">
+        <img src="img/profil.jpg" alt="img" height="400" width="400" />
+      </div>
+    </section>
+
+    <section class="Tentang" id="Tentang">
+      <div class="Tentang-img">
+        <img src="img/profil.jpg" alt="imag" height="400" width="400" />
+      </div>
+      <div class="Tentang-content">
+        <h1 class="heading">Tentang <span>Saya</span></h1>
+        <h3>Technical Support</h3>
+         <h2>1. Bank BRI</h2>
+            <p>Instalasi VMS (CCTV Online): Menginstal dan mengonfigurasi sistem Video Management Software (VMS) untuk CCTV online, memastikan pengawasan yang efektif dan keamanan yang lebih baik di lingkungan perbankan.</p>
+            
+            <h2>2. Bank BTN</h2>
+            <p>Instalasi Komputer: Melakukan instalasi perangkat keras dan perangkat lunak komputer, memastikan sistem berjalan dengan optimal untuk mendukung operasional perbankan.</p>
+            
+            <h2>3. Bank BJB</h2>
+            <p>Migrasi Switch: Mengelola proses migrasi switch jaringan, meningkatkan kinerja dan efisiensi sistem jaringan bank untuk mendukung transaksi dan komunikasi yang lebih cepat dan handal.</p>
+            
+            <h2>4. Bank Mandiri</h2>
+            <p>Repair Printer: Melakukan perbaikan dan pemeliharaan printer untuk memastikan kelancaran operasional perbankan, meminimalkan downtime dan meningkatkan produktivitas.</p>
+            
+            <h2>5. Bank BWS</h2>
+            <p>Repair Printer: Menangani perbaikan printer yang mengalami masalah teknis, menjaga perangkat dalam kondisi baik untuk mendukung aktivitas perbankan.</p>
+            <p>Instalasi Komputer: Melaksanakan instalasi sistem komputer yang diperlukan untuk memastikan bahwa semua unit bekerja dengan efisien dalam mendukung fungsi perbankan.</p>
+      </div>
+    </section>
+
+    <section class="Skill" id="Skill">
+      <h2 class="heading"><span>Skill</span> Saya</h2>
+      <h1>Bahasa Pemprograman :</h1>
+      <div class="Skill-container">
+        <div class="Skill-box">
+          <img src="img/C++.png" alt="imag" height="150" width="150" />
+          <h3>Bahasa C++</h3>
+          <p>Tingkat : Menengah</p>
+        </div>
+
+        <div class="Skill-box">
+          <img src="img/html.png" alt="imag" height="150" width="150" />
+          <h3>Bahasa HTML5</h3>
+          <p>Tingkat : Menengah</p>
+        </div>
+        <div class="Skill-box">
+          <img src="img/php.png" alt="imag" height="150" width="150" />
+          <h3>Bahasa PHP</h3>
+          <p>Tingkat : Basic</p>
+        </div>
+
+        <div class="Skill-box">
+          <img src="img/py.png" alt="imag" height="150" width="150" />
+          <h3>Bahasa Python</h3>
+          <p>Tingkat : Menengah</p>
+        </div>
+      </div>
+
+      <h1>software :</h1>
+      <div class="Skill-container">
+        <div class="Skill-box">
+        <img src="img/ms.png" alt="imag" height="150" width="150" />
+        <h3>Microsoft : Word, Excel, Power point</h3>
+        <p>Tingkat : Menengah</p>
+      </div>
+
+      <div class="Skill-container">
+        <div class="Skill-box">
+        <img src="img/ard.png" alt="imag" height="150" width="150" />
+        <h3>Arduino Ide</h3>
+        <p>Tingkat : Menengah</p>
+      </div>
+      </div>
+
+      <div class="Skill-container">
+        <div class="Skill-box">
+        <img src="img/dw.png" alt="imag" height="150" width="150" />
+        <h3>Corel Draw</h3>
+        <p>Tingkat : Menengah</p>
+      </div>
+      </div>
+      </div>
+
+      <h1>Lainnya :</h1>
+      <div class="Skill-container">
+        <div class="Skill-box">
+        <img src="img/plc.jpg" alt="img" height="150" width="150" />
+        <h3>Programable Logic Control (PLC) </h3>
+        <p>Tingkat : Basic</p>
+      </div>
+      <div class="Skill-container">
+        <div class="Skill-box">
+        <img src="img/iot.png" alt="img" height="150" width="150" />
+        <h3>Internet of Think (IoT) </h3>
+        <p>Tingkat : Basic</p>
+      </div>
+
+    </section>
+
+    <section class="Penghargaan" id="Penghargaan">
+      <h2 class="heading">Latest <span>Sertifikat</span></h2>
+        <div class="Penghargaan-container">
+          <div class="Penghargaan-box">
+            <img src="img/1.jpg" alt="" height="300" width="300" />
+            <div class="Penghargaan-layer">
+              <h4>COACHING CLINIC AWAS PHISING BIKIN PUSING</h4>
+              <p>yang diselanggarakan oleh : Kemertian Komunikasi dan informatika
+                Siberkreasi dan Tempo Media</p>
+               <a href="#"><i class='bx bx-link-external'></i></a>
+            </div>
+          </div>
+
+          <div class="Penghargaan-box">
+            <img src="img/2.png" alt="" height="300" width="300" />
+            <div class="Penghargaan-layer">
+              <h4>Volumetric Lung Lesion Segmentation From PET/CT Images</h4>
+              <p>yang di selenggaran oleh Fakultas Teknik dan Ilmu Komputer
+                Universitas Teknokrat Indonesia</p>
+               <a href="#"> <i class='bx bx-link-external'></i></a>
+            </div>
+          </div>
+          
+          <div class="Penghargaan-box">
+            <img src="img/3.jpg" alt="" height="300" width="300" />
+            <div class="Penghargaan-layer">
+              <h4>Kompetitor ASEAN Skill Competition XIII Kejuruan Internet of Things</h4>
+              <p>yang di selenggaran oleh Dinas Tenaga Kerja dan Transmigrasi Provinsi Lampung</p>
+               <a href="#"> <i class='bx bx-link-external'></i></a>
+            </div>
+          </div>
+
+        </div>
+    </section>
+
+    <section class="Kontak" id="Kontak">
+        <h2 class="heading">Kontak<span> Saya</span></h2>
+
+        <form action="proses.php" method="post">
+          <div class="input-box">
+            <input type="text" name="name" required placeholder="Nama Lengkap">
+            <input type="email" name="email" required placeholder="Email Anda">
+          </div>
+          <div class="input-box">
+            <input type="tel" name="phone" placeholder="Nomor Telepon">
+            <input type="text" name="subject" placeholder="Subjek Email">
+          </div>
+          <textarea name="message" required cols="30" rows="10" placeholder="Pesan Anda"></textarea>
+          <input type="submit" value="Kirim Pesan" class="btn">
+        </form>
+        
+    </section>
+
+    <footer class="footer">
+      <div class="footer-text">
+        <p>Copyright &copy; 2023 by Kevin Rizki | All Rights Reserved</p>
+      </div>
+      
+        <div class="footer-iconTop">
+          <a href="#Beranda"><i class='bx bx-up-arrow-circle'></i></a>
+        </div>
+      
+    </footer>
+
+    <!-- scroll reveal -->
+    <script src="https://unpkg.com/scrollreveal"></script>
+
+    <!-- typed js -->
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+
+    <!-- custom js -->
+    <script src="script.js"></script>
+  </body>
+</html>
