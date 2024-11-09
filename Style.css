@@ -113,6 +113,10 @@ section {
   font-size: 3.5rem;
 }
 
+.Tentang-content h2 {
+  font-size: 2.5rem;
+}
+
 .Beranda-content h3 {
   font-size: 3.2rem;
   font-weight: 700;
@@ -127,6 +131,10 @@ span {
 }
 
 .Beranda-content p {
+  font-size: 1.6rem;
+}
+
+.Tentang-content p {
   font-size: 1.6rem;
 }
 
